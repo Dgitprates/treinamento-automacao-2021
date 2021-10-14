@@ -32,4 +32,8 @@ public class HomePage extends HomePageElementMapper {
         clicksubmit_search();
     }
 
+    public void clickCategoryTShirts() {
+        menuTshirts.click();
+    }
+
 }

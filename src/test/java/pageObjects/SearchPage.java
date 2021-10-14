@@ -26,5 +26,4 @@ public class SearchPage extends SearchPageElementMapper {
         return getTextNavigation_page().equals("Search");
     }
 
-
 }
