@@ -93,4 +93,27 @@ public class SetupTest extends BaseTests{
         //Verificar se o produto está na pagina de detalhes corretamente
         assertTrue(pdp.getProductNamePDP().equals(nameProductCategory));
     }
+
+    @Test
+    public void testAddProductToCartPage() {
+        //Acessar a pagina do produto
+        testAddProductToProductPage();
+
+        //Iniciar páginas
+        ProductPage pdp = new ProductPage();
+        CartPage cart = new CartPage();
+
+        //Salvar o nome do produto na página de PDP
+        String nameProductPDP = pdp.getProductNamePDP();
+
+        //Clicar no botão de add ao carrinho
+        pdp.clickButtonAddToCart();
+
+        //Clicar no botão Proceed to checkout
+        pdp.clickButtonModalProceedToCheckout();
+
+        //Validação do nome do produto do carrinho
+        assertTrue(cart.getNameProductCart().equals(nameProductPDP));
+
+    }
 }
