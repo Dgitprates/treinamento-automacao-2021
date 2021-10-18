@@ -1,7 +1,6 @@
 package tests;
 
 import org.hamcrest.CoreMatchers;
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import pageObjects.*;
@@ -87,7 +86,7 @@ public class SetupTest extends BaseTests{
         //Salva nome do produto na página de categoria
         String nameProductCategory = category.getProductNameCategory();
 
-        //Clicar em more e direcionar oara a a página do produto
+        //Clicar em more e direciona para a a página do produto
         category.clickProductAddToProductPage();
 
         //Verificar se o produto está na pagina de detalhes corretamente
